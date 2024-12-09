@@ -15,7 +15,7 @@ def is_valid_guess(letter):
         print("You either entered a non-alphabetical character or you entered capital letter.")
         return False
     elif(len(letter)!=1):
-        # feri input dina paryo
+        
         print("Please enter a single letter")
         return False
     return True
@@ -34,30 +34,6 @@ def hangman(chances, someWord):
     while chances>0:
         print(f"Number of letters: {word_len}")
         guesses = str(input("Enter a letter: "))
-
-        # if(gussed_word_typo(guesses)):
-        #     if guesses not in someWord:
-        #         chances = chances - 1
-        #         print(f"You have got {chances} chances left")
-        #         continue
-        #     else:
-        #         print("Correct!!")
-        #         print(f"You have got {chances} chances left")
-        #         correctGuesses = [guesses]
-        #         if(len(correctGuesses) == word_len):
-        #             print(f"You won. The correct word is {guesses}")
-        #             break
-        #         continue
-            
-
-        # elif(gussed_word_typo(guesses)==False):
-        #     chances = chances - 1
-        #     print(f"You have got {chances} chances left")
-        #     yes_no=str(input("Do you want to contnuue[Y/n]:"))
-        #     if(yes_no=="Y"):
-        #         continue
-        #     else:
-        #         break
 
         if not is_valid_guess(guesses):
             continue
